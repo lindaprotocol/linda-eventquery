@@ -1,4 +1,4 @@
-package org.tron.trongeventquery.solidityevents;
+package org.linda.lindageventquery.solidityevents;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;

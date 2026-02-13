@@ -1,10 +1,10 @@
-package org.tron.trongeventquery.monitor;
+package org.linda.lindageventquery.monitor;
 
 import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.tron.trongeventquery.filter.CommonFilter;
+import org.linda.lindageventquery.filter.CommonFilter;
 
 
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
-package org.tron.trongeventquery.query;
+package org.linda.lindageventquery.query;
 
 
-import static org.tron.common.utils.LogConfig.LOG;
+import static org.linda.common.utils.LogConfig.LOG;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;

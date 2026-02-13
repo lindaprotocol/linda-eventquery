@@ -1,4 +1,4 @@
-package org.tron.trongeventquery.transfers;
+package org.linda.lindageventquery.transfers;
 
 import com.alibaba.fastjson.JSONObject;
 import java.util.HashMap;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.tron.trongeventquery.query.QueryFactory;
-import org.tron.trongeventquery.transactions.TransactionTriggerEntity;
+import org.linda.lindageventquery.query.QueryFactory;
+import org.linda.lindageventquery.transactions.TransactionTriggerEntity;
 
 @RestController
 @Component

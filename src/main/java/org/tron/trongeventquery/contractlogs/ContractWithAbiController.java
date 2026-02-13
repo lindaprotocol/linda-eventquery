@@ -1,4 +1,4 @@
-package org.tron.trongeventquery.contractlogs;
+package org.linda.lindageventquery.contractlogs;
 
 import com.alibaba.fastjson.JSONObject;
 import java.util.ArrayList;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.tron.trongeventquery.contractevents.ContractEventTriggerEntity;
-import org.tron.trongeventquery.query.QueryFactory;
+import org.linda.lindageventquery.contractevents.ContractEventTriggerEntity;
+import org.linda.lindageventquery.query.QueryFactory;
 
 @RestController
 public class ContractWithAbiController {

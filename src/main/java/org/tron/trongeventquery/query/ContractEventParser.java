@@ -1,7 +1,7 @@
-package org.tron.trongeventquery.query;
+package org.linda.lindageventquery.query;
 
 
-import static org.tron.common.utils.LogConfig.LOG;
+import static org.linda.common.utils.LogConfig.LOG;
 
 import java.math.BigInteger;
 import java.util.regex.Pattern;
@@ -11,9 +11,9 @@ import org.pf4j.util.StringUtils;
 import org.spongycastle.crypto.OutputLengthException;
 import org.spongycastle.util.Arrays;
 import org.spongycastle.util.encoders.Hex;
-import org.tron.common.runtime.utils.MUtil;
-import org.tron.common.runtime.vm.DataWord;
-import org.tron.core.Wallet;
+import org.linda.common.runtime.utils.MUtil;
+import org.linda.common.runtime.vm.DataWord;
+import org.linda.core.Wallet;
 
 
 public class ContractEventParser {
@@ -44,7 +44,7 @@ public class ContractEventParser {
         return Hex.toHexString(startBytes);
       } else if (type == Type.ADDRESS) {
         byte[] last20Bytes = Arrays.copyOfRange(startBytes, 12, startBytes.length);
-        return Wallet.encode58Check(MUtil.convertToTronAddress(last20Bytes));
+        return Wallet.encode58Check(MUtil.convertToLindaAddress(last20Bytes));
       } else if (type == Type.STRING || type == Type.BYTES) {
         int start = intValueExact(startBytes);
         byte[] lengthBytes = subBytes(data, start, DATAWORD_UNIT_SIZE);
@@ -64,7 +64,7 @@ public class ContractEventParser {
   protected static Type basicType(String type) {
     if (!Pattern.matches("^.*\\[\\d*\\]$", type)) {
       // ignore not valide type such as "int92", "bytes33", these types will be compiled failed.
-      if (type.startsWith("int") || type.startsWith("uint") || type.startsWith("trcToken")) {
+      if (type.startsWith("int") || type.startsWith("uint") || type.startsWith("lrcToken")) {
         return Type.INT_NUMBER;
       } else if ("bool".equals(type)) {
         return Type.BOOL;
@@ -114,7 +114,7 @@ public class ContractEventParser {
       return String.valueOf(!DataWord.isZero(bytes));
     } else if (type == Type.ADDRESS) {
       byte[] last20Bytes = Arrays.copyOfRange(bytes, 12, bytes.length);
-      return Wallet.encode58Check(MUtil.convertToTronAddress(last20Bytes));
+      return Wallet.encode58Check(MUtil.convertToLindaAddress(last20Bytes));
     }
     return Hex.toHexString(bytes);
   }

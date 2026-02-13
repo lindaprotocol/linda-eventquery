@@ -16,19 +16,19 @@
  * along with the ethereumJ library. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.tron.core;
+package org.linda.core;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import org.tron.common.utils.Base58;
-import org.tron.common.utils.Sha256Hash;
+import org.linda.common.utils.Base58;
+import org.linda.common.utils.Sha256Hash;
 
 @Slf4j
 @Component
 public class Wallet {
 
 
-  private static byte addressPreFixByte = (byte) 0x41;   //41 + address
+  private static byte addressPreFixByte = (byte) 0x30;   //30 + address
 
   /**
    * Creates a new Wallet .

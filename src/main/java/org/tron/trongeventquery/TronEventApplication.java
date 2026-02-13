@@ -1,7 +1,7 @@
-package org.tron.trongeventquery;
+package org.linda.lindageventquery;
 
-import static org.tron.common.utils.LogConfig.LOG;
-import static org.tron.trongeventquery.contractevents.ContractEventController.isRunRePushThread;
+import static org.linda.common.utils.LogConfig.LOG;
+import static org.linda.lindageventquery.contractevents.ContractEventController.isRunRePushThread;
 
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;
@@ -25,12 +25,12 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 
 
 @SpringBootApplication(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
-@ServletComponentScan("org.tron.trongeventquery.filter") //Scan Filter
+@ServletComponentScan("org.linda.lindageventquery.filter") //Scan Filter
 @PropertySource(value = {"file:./config.conf"}, ignoreResourceNotFound = true)
-public class TronEventApplication {
+public class LindaEventApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(TronEventApplication.class, args);
+    SpringApplication.run(LindaEventApplication.class, args);
     shutdown();
   }
   

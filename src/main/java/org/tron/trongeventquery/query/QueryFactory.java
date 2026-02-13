@@ -1,4 +1,4 @@
-package org.tron.trongeventquery.query;
+package org.linda.lindageventquery.query;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -15,13 +15,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
-import org.tron.common.crypto.Hash;
-import org.tron.common.runtime.vm.DataWord;
-import org.tron.common.runtime.vm.LogInfo;
-import org.tron.trongeventquery.contractevents.ContractEventTriggerEntity;
-import org.tron.trongeventquery.contractlogs.ContractLogTriggerEntity;
-import org.tron.trongeventquery.contractlogs.DataWordEntity;
-import org.tron.trongeventquery.contractlogs.LogInfoEntity;
+import org.linda.common.crypto.Hash;
+import org.linda.common.runtime.vm.DataWord;
+import org.linda.common.runtime.vm.LogInfo;
+import org.linda.lindageventquery.contractevents.ContractEventTriggerEntity;
+import org.linda.lindageventquery.contractlogs.ContractLogTriggerEntity;
+import org.linda.lindageventquery.contractlogs.DataWordEntity;
+import org.linda.lindageventquery.contractlogs.LogInfoEntity;
 
 public class QueryFactory {
 

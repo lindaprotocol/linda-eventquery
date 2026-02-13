@@ -1,12 +1,12 @@
 #!/bin/bash
 while true; do
-  pid=`ps -ef | grep troneventquery | grep -v grep | awk '{print $2}'`
+  pid=`ps -ef | grep lindaeventquery | grep -v grep | awk '{print $2}'`
   if [ -n "$pid" ]; then
     kill -15 $pid
-    echo "ending tron event query process"
+    echo "ending linda event query process"
     sleep 1
   else
-    echo "tron event query killed successfully!"
+    echo "linda event query killed successfully!"
     break
   fi
 done
@@ -15,7 +15,7 @@ xmx=`echo "$total/1024/1024*0.6" | bc |awk -F. '{print $1"g"}'`
 logtime=`date +%Y-%m-%d_%H-%M-%S`
  nohup java -Xmx$xmx -XX:+UseConcMarkSweepGC -XX:+PrintGCDetails -Xloggc:./gc.log\
  -XX:+PrintGCDateStamps -XX:+CMSParallelRemarkEnabled -XX:ReservedCodeCacheSize=256m\
- -XX:+CMSScavengeBeforeRemark -jar target/troneventquery-1.0.0-SNAPSHOT.jar >> query.log 2>&1 &
+ -XX:+CMSScavengeBeforeRemark -jar target/lindaeventquery-1.0.0-SNAPSHOT.jar >> query.log 2>&1 &
 
 sleep 10
 echo "ok!"

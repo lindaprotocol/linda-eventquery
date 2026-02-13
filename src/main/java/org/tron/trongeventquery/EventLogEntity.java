@@ -1,4 +1,4 @@
-package org.tron.trongeventquery;
+package org.linda.lindageventquery;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;

@@ -1,4 +1,4 @@
-package org.tron.trongeventquery.response;
+package org.linda.lindageventquery.response;
 
 import com.alibaba.fastjson.JSONObject;
 

@@ -1,5 +1,5 @@
-package org.tron.common.crypto;
-import static org.tron.common.utils.LogConfig.LOG;
+package org.linda.common.crypto;
+import static org.linda.common.utils.LogConfig.LOG;
 
 import java.util.regex.Pattern;
 

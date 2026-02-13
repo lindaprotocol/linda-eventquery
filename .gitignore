@@ -1,6 +1,6 @@
 target/*
 .idea/*
-troneventquery.iml
+lindaeventquery.iml
 .classpath
 .factorypath
 .settings/*

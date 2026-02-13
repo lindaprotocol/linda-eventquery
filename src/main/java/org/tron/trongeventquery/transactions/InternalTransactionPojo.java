@@ -1,4 +1,4 @@
-package org.tron.trongeventquery.transactions;
+package org.linda.lindageventquery.transactions;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.HashMap;
@@ -9,7 +9,7 @@ public class InternalTransactionPojo {
   @Field(value = "hash")
   @JsonProperty(value = "hash")
   private String hash;
-  /* the amount of trx to transfer (calculated as sun) */
+  /* the amount of lind to transfer (calculated as sun) */
   @Field(value = "callValue")
   @JsonProperty(value = "callValue")
   private long callValue;

@@ -1,4 +1,4 @@
-package org.tron.trongeventquery.contractlogs;
+package org.linda.lindageventquery.contractlogs;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;

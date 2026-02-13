@@ -1,4 +1,4 @@
-package org.tron.trongeventquery.transactions;
+package org.linda.lindageventquery.transactions;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.io.Serializable;

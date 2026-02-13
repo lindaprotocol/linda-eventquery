@@ -1,4 +1,4 @@
-package org.tron.trongeventquery.contractevents;
+package org.linda.lindageventquery.contractevents;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Map;
@@ -6,7 +6,7 @@ import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
-import org.tron.trongeventquery.contractlogs.LogInfoEntity;
+import org.linda.lindageventquery.contractlogs.LogInfoEntity;
 
 @Document(collection = "contractevent")
 public class ContractEventTriggerEntity {

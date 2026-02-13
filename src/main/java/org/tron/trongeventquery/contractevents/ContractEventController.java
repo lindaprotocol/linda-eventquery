@@ -1,8 +1,8 @@
-package org.tron.trongeventquery.contractevents;
+package org.linda.lindageventquery.contractevents;
 
 
-import static org.tron.common.utils.LogConfig.LOG;
-import static org.tron.core.Wallet.decode58Check;
+import static org.linda.common.utils.LogConfig.LOG;
+import static org.linda.core.Wallet.decode58Check;
 
 import com.alibaba.fastjson.JSONObject;
 import java.util.ArrayList;
@@ -27,16 +27,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.tron.common.crypto.Crypto;
-import org.tron.common.utils.ByteArray;
-import org.tron.trongeventquery.query.QueryFactory;
-import org.tron.trongeventquery.response.Response;
-import org.tron.trongeventquery.solidityevents.SolidityTriggerEntity;
+import org.linda.common.crypto.Crypto;
+import org.linda.common.utils.ByteArray;
+import org.linda.lindageventquery.query.QueryFactory;
+import org.linda.lindageventquery.response.Response;
+import org.linda.lindageventquery.solidityevents.SolidityTriggerEntity;
 
 @RestController
 @Component
 public class ContractEventController {
-  public static final String ADD_PRE_FIX_STRING_MAINNET = "41";
+  public static final String ADD_PRE_FIX_STRING_MAINNET = "30";
   private static final int RETURN_ALL_EVENTS = 0;
   private static final int RETURN_ONLY_CONFIRMED_EVENTS = 1;
   private static final int RETURN_ONLY_UNCONFIRMED_EVENTS = 2;
@@ -228,7 +228,7 @@ public class ContractEventController {
     return queryResult;
   }
 
-  @RequestMapping(method = RequestMethod.GET, value = "/trc20/getholder/{contractAddress}")
+  @RequestMapping(method = RequestMethod.GET, value = "/lrc20/getholder/{contractAddress}")
   public  List<String> totalholder(
       @PathVariable String contractAddress
   ) {
@@ -306,10 +306,10 @@ public class ContractEventController {
     return array;
   }
 
-  // for tron web
+  // for linda web
 
   @RequestMapping(method = RequestMethod.GET, value = "/event/transaction/{transactionId}")
-  public List<JSONObject> findOneByTransactionTronGri (@PathVariable String transactionId) {
+  public List<JSONObject> findOneByTransactionLindaGri (@PathVariable String transactionId) {
 
     QueryFactory query = new QueryFactory();
     query.setTransactionIdEqual(transactionId);
@@ -340,7 +340,7 @@ public class ContractEventController {
 
   // get event list
   @RequestMapping(method = RequestMethod.GET, value = "/event/contract/{contractAddress}")
-  public Object findEventsByContractAddressTronGrid (
+  public Object findEventsByContractAddressLindaGrid (
       @PathVariable String contractAddress,
       @RequestParam(value = "size", required = false, defaultValue = "20") int limit,
       @RequestParam(value = "sort", required = false, defaultValue = "-timeStamp") String sort,
@@ -408,7 +408,7 @@ public class ContractEventController {
 
   // get event list
   @RequestMapping(method = RequestMethod.GET, value = "/event/contract/{contractAddress}/{eventName}")
-  public Object findEventsByContractAddressAndEventNameTronGrid (
+  public Object findEventsByContractAddressAndEventNameLindaGrid (
       @PathVariable String contractAddress,
       @PathVariable String eventName,
       @RequestParam(value = "size", required = false, defaultValue = "20") int limit,
@@ -484,7 +484,7 @@ public class ContractEventController {
 
   // get event list
   @RequestMapping(method = RequestMethod.GET, value = "/event/contract/{contractAddress}/{eventName}/{blockNumber}")
-  public List<JSONObject> findEventsByContractAddressAndEventNameAndBlockNumTronGrid (
+  public List<JSONObject> findEventsByContractAddressAndEventNameAndBlockNumLindaGrid (
       @PathVariable String contractAddress,
       @PathVariable String eventName,
       @PathVariable String blockNumber,

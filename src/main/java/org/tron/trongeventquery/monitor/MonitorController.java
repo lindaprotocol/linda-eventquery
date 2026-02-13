@@ -1,4 +1,4 @@
-package org.tron.trongeventquery.monitor;
+package org.linda.lindageventquery.monitor;
 
 
 import com.alibaba.fastjson.JSON;
